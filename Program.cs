@@ -33,8 +33,8 @@
                 case 4:
                     CustomLinkedList customLinkedList2 = new CustomLinkedList();
                     customLinkedList2.Append(56);                                     //Append() UC3
-                    customLinkedList2.AddFirst(30);
-                    customLinkedList2.AddFirst(70);
+                    customLinkedList2.Append(30);
+                    customLinkedList2.Append(70);
                     customLinkedList2.Display();
                     break;
                 default:
