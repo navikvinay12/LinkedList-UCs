@@ -23,6 +23,13 @@ namespace LinkedListUCs
                 }
                 temp.next= newNode;
             }
+        }       //creating LinkedList UC1
+        public void AddFirst(int data)      //AddFirst UC2
+        {
+            Node newNode=new Node(data);
+            newNode.next= head;
+            head = newNode;
+            Console.WriteLine($"{newNode.data} is added into the list.");
         }
         public void Display()
         {
