@@ -13,7 +13,10 @@ namespace LinkedListUCs
         {
             Node newNode=new Node(data);
             if(head==null)
+            {
                 head = newNode;
+                //Console.WriteLine($"{newNode.data} is added in list ");
+            }
             else
             {
                 Node temp = head;
@@ -30,6 +33,10 @@ namespace LinkedListUCs
             newNode.next= head;
             head = newNode;
             Console.WriteLine($"{newNode.data} is added into the list.");
+        }
+        public void Append(int data)
+        {
+            AddLast(data);
         }
         public void Display()
         {
