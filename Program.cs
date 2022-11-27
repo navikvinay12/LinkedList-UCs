@@ -11,7 +11,8 @@
                 "3: AddFirst in LinkedList \n" +
                 "4: Append in LinkedList and Displaying\n" +
                 "5: Insertion between elements.\n" +
-                "6: Deleting First Element from the LL.");
+                "6: Deleting First Element from the LL.\n" +
+                "7: Deleting Last Element from the LL.");
             int options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
@@ -54,6 +55,15 @@
                     customLinkedList4.Display();
                     customLinkedList4.RemoveFirst();            //Deleting First Node UC5.
                     customLinkedList4.Display();
+                    break;
+                case 7:
+                    CustomLinkedList customLinkedList5 = new CustomLinkedList();
+                    customLinkedList5.AddFirst(56);
+                    customLinkedList5.AddLast(30);
+                    customLinkedList5.AddLast(70);
+                    customLinkedList5.Display();
+                    customLinkedList5.RemoveLast();             //Deleteing Last Node UC6.
+                    customLinkedList5.Display();
                     break;
                 default:
                     Console.WriteLine("Invalid option selected .Please try again !");

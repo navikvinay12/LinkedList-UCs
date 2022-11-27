@@ -9,7 +9,7 @@ namespace LinkedListUCs
     public class CustomLinkedList
     {
         public Node head;
-        public void AddLast(int data)
+        public void AddLast(int data)       //creating LinkedList UC1
         {
             Node newNode=new Node(data);
             if(head==null)
@@ -27,7 +27,7 @@ namespace LinkedListUCs
                 temp.next= newNode;
                 Console.WriteLine($"{newNode.data} is added.");
             }
-        }       //creating LinkedList UC1
+        }       
         public void AddFirst(int data)      //AddFirst UC2
         {
             Node newNode=new Node(data);
@@ -65,13 +65,40 @@ namespace LinkedListUCs
             if (!isFound)
                 Console.WriteLine($"{data} node is not present.");
         }
-        public void RemoveFirst()      //AddFirst UC5 
+        public void RemoveFirst()      //RemoveFirst UC5 
         {
-            int deletedNode = head.data;
-            head = head.next;
-            Console.WriteLine($"First node {deletedNode} has been removed.");
+            if (head == null)
+                Console.WriteLine("LinkedList is emty");
+            else
+            {
+                int deletedNode = head.data;
+                head = head.next;
+                Console.WriteLine($"{deletedNode} is removed from Linkedlist");
+            }
         }
-        public void Display()
+        public void RemoveLast()        //RemoveLast UC6
+        {
+            Node temp = head;
+            if (head==null)
+                Console.WriteLine("LinkedList is emty");
+            else if(temp.next== null)
+            {
+                int data = temp.data;
+                head = null;
+                Console.WriteLine($"{data} is deleted");
+            }
+            else
+            {
+                while(temp.next.next!=null)
+                {
+                    temp = temp.next;
+                }
+                int lastDeletedNode = temp.next.data;
+                temp.next = null;
+                Console.WriteLine($"{lastDeletedNode} node is deleted");
+            }
+        }
+        public void Display()           //Display()
         {
             Console.Write("Displaying Nodes ");
             Node temp = this.head;
@@ -90,7 +117,5 @@ namespace LinkedListUCs
             }
             Console.WriteLine();
         }
-
-
     }
 }
