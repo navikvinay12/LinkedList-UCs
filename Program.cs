@@ -12,7 +12,8 @@
                 "4: Append in LinkedList and Displaying\n" +
                 "5: Insertion between elements.\n" +
                 "6: Deleting First Element from the LL.\n" +
-                "7: Deleting Last Element from the LL.");
+                "7: Deleting Last Element from the LL.\n" +
+                "8: Searching any given Node.\n");
             int options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
@@ -64,6 +65,13 @@
                     customLinkedList5.Display();
                     customLinkedList5.RemoveLast();             //Deleteing Last Node UC6.
                     customLinkedList5.Display();
+                    break;
+                case 8:
+                    CustomLinkedList customLinkedList6 = new CustomLinkedList();
+                    customLinkedList6.AddFirst(56);
+                    customLinkedList6.AddLast(30);
+                    customLinkedList6.AddLast(70);
+                    customLinkedList6.SearchNode(30);       //Searching any given Node .UC7.
                     break;
                 default:
                     Console.WriteLine("Invalid option selected .Please try again !");
