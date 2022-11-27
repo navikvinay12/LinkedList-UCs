@@ -65,6 +65,12 @@ namespace LinkedListUCs
             if (!isFound)
                 Console.WriteLine($"{data} node is not present.");
         }
+        public void RemoveFirst()      //AddFirst UC5 
+        {
+            int deletedNode = head.data;
+            head = head.next;
+            Console.WriteLine($"First node {deletedNode} has been removed.");
+        }
         public void Display()
         {
             Console.Write("Displaying Nodes ");
