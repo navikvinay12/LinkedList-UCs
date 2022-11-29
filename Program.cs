@@ -6,15 +6,16 @@
         {
             Console.WriteLine("Welcome to LinkedList UCs");
             Console.WriteLine("Please choose as per the given options -\n" +
-                "1: Adding elements by BuiltIn-LinkedList\n" +
-                "2: Adding elements by using Custom LinkedList\n" +
-                "3: AddFirst in LinkedList \n" +
-                "4: Append in LinkedList and Displaying\n" +
-                "5: Insertion between elements.\n" +
-                "6: Deleting First Element from the LL.\n" +
-                "7: Deleting Last Element from the LL.\n" +
-                "8: Searching any given Node.\n" +
-                "9: Insert Element after given node.\n");
+                "1 : Adding elements by BuiltIn-LinkedList\n" +
+                "2 : Adding elements by using Custom LinkedList\n" +
+                "3 : AddFirst in LinkedList \n" +
+                "4 : Append in LinkedList and Displaying\n" +
+                "5 : Insertion between elements.\n" +
+                "6 : Deleting First Element from the LL.\n" +
+                "7 : Deleting Last Element from the LL.\n" +
+                "8 : Searching any given Node.\n" +
+                "9 : Insert Element after given node.\n" +
+                "10: Delete any node from middle of LL");
             int options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
@@ -82,6 +83,17 @@
                     customLinkedList7.Display();
                     customLinkedList7.InsertAfter(30,40);      //Insert After Node UC8.
                     customLinkedList7.Display();
+                    break;
+                case 10:    //UC9  Add Nodes 56 30 40 70 and delete 40 .
+                    CustomLinkedList customLinkedList8 = new CustomLinkedList();
+                    customLinkedList8.AddFirst(56);
+                    customLinkedList8.AddLast(30);
+                    customLinkedList8.AddLast(40);
+                    customLinkedList8.AddLast(70);
+                    customLinkedList8.Display();
+                    customLinkedList8.DeleteFromMiddle(40);     //UC9 delete node 40 from sequence 56 30 40 70.
+                    customLinkedList8.Display();
+                    Console.WriteLine("Linked List Size is : "+customLinkedList8.Size());       //Size() .
                     break;
                 default:
                     Console.WriteLine("Invalid option selected .Please try again !");
