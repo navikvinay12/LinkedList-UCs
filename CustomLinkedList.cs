@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace LinkedListUCs
 {
     public class CustomLinkedList
     {
         public Node head;
+        public Node sorted;
         public void AddLast(int data)       //creating LinkedList UC1
         {
             Node newNode=new Node(data);
@@ -211,5 +214,6 @@ namespace LinkedListUCs
                 return elementCount;
             }
         }
+
     }
 }
